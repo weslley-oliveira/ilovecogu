@@ -1,85 +1,77 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>I Love Cogu 🍄</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
+      <main className="px-4 md:px-20 h-screen text-gray-100 flex align-middle items-center bg-[url('/bg.jpg')] bg-cover">
+        <section className='flex flex-row'>
+          <div className='p-10 md:w-1/2 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 rounded-md'>
+            <h1 className=" text-4xl md:text-6xl pb-6 font-bold">
+              I Love Cogu
+              <a className="text-blue-600" href="https://www.instagram.com/ilovecogu/">
+              {" "} 🍄
+              </a>
+            </h1>
+            <p className='md:text-xl font-light opacity-75'>
+              Its time to explore the world of magic and beautiful mushrooms. Something you have never seen or perhaps 
+              heard in the movies. Because We love mushrooms and because We want to share this with you, we are taking 
+              you with us on a journey through underground worlds, fairy like fields and mushroom forests. 
+              We want to inspire you to feel this wonder and beauty together with us.
             </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+          </div>
+          <div>
+            
+          </div>
+        </section>
       </main>
+      <div className="p-4 pt-10 flex flex-col text-left gap-4">
+          <a
+            href=""
+            className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600"
+          >
+            <p className="text-xl">
+              What is the state of the art of our knowledge of the different species?
+            </p>
+          </a>
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
+          <a
+            href=""
+            className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600"
+          >
+            <p className="text-xl">
+            Did you think what is magic mushrooms really?
+            </p>
+          </a>
+
+          <a
+            href=""
+            className="p-6 text-left border rounded-xl hover:text-blue-600 focus:text-blue-600"
+          >
+            <p className="text-xl">
+            Do I have to be afraid of poisonous mushrooms?
+            </p>
+          </a>
+          <h3 className="text-2xl font-bold">And many more questions that await an answer.</h3>
+        
+        </div>
+        <footer className="flex items-center justify-center w-full h-24 border-t bg-[url('/bg.jpg')] bg-cover text-white">
         <a
-          className="flex items-center justify-center gap-2"
+          className="flex items-center justify-center"
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          Made with Love 🍄
         </a>
       </footer>
     </div>
+    
   )
 }
 
