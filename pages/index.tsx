@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { FiHeart, FiArrowRight, FiUsers, FiCalendar, FiDollarSign, FiPackage } from 'react-icons/fi';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default function Home() {
   const features = [

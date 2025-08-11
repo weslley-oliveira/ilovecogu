@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { FiSearch, FiPlus, FiEdit, FiPhone, FiMail, FiMapPin, FiUser } from 'react-icons/fi';
 import { mockCustomers, mockPets } from '../../data/mockData';
 import { Customer } from '../../types';
+import CustomerCreateModal, { NewCustomerInput } from '../CustomerCreateDialog';
 
 const Customers = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCustomer, setSelectedCustomer] = useState<Customer | null>(null);
+  const [customers, setCustomers] = useState<Customer[]>(mockCustomers);
 
   const filteredCustomers = mockCustomers.filter(customer =>
     customer.firstName.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -17,12 +19,16 @@ const Customers = () => {
     return mockPets.filter(pet => pet.ownerId === customerId);
   };
 
+  const [showCreate, setShowCreate] = useState(false);
+
+  
+
   return (
     <div className="space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold text-gray-900">Customer Management</h1>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center hover:bg-blue-700 transition-colors">
+        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center hover:bg-blue-700 transition-colors" onClick={() => setShowCreate(true)}>
           <FiPlus className="mr-2 h-4 w-4" />
           Add Customer
         </button>
@@ -196,6 +202,15 @@ const Customers = () => {
           )}
         </div>
       </div>
+       <CustomerCreateModal
+        show={showCreate}
+        onClose={() => setShowCreate(false)}
+        onSave={async (data) => {
+    console.log("TESTE — dados do modal:", data); // ver no DevTools
+    // opcional: alert("Salvou!");
+  }}
+        title="Novo Cliente"
+      />
     </div>
   );
 };
